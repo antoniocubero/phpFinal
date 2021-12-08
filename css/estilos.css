@@ -1,0 +1,276 @@
+:root{
+    --primary:rgb(255, 224, 123);
+    --secundary: rgb(255, 213, 73);
+    --lightprima: rgb(255, 237, 179);
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style-type: none;
+}
+
+/* Navegador compartido */
+nav{
+    padding: 0;
+}
+nav #nav_cont{
+    background-color: var(--primary);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+nav #nav_cont #logo{
+    display: flex;
+    align-items: center;
+}
+nav #nav_cont #logo #logo_vector{
+    width: 60px;
+}
+nav #nav_cont #logo #logo_name{
+    font-weight: 700;
+    margin-left: 10px;
+    font-size: 25px;
+}
+nav #nav_cont #nav_menu{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+nav #nav_cont #nav_menu li a{
+    padding: 0 18px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition-property: background-color;
+    transition-duration: 0.4s;
+}
+nav #nav_cont #nav_menu li a:hover{
+    background-color: var(--secundary);
+}
+
+
+#index_btns{
+    background-color: rgb(250, 250, 250);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#index_btns #btn_main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 150px;
+    padding: 0 200px;
+}
+#index_btns #btn_main .btn_main{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#index_btns #btn_main .btn_main a{
+    background-color: var(--primary);
+    transition-duration: 0.3s;
+    transition-property: all;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: static;
+}
+#index_btns #btn_main .btn_main:hover a{
+    background-color: var(--secundary);
+    width: 115px;
+    height: 115px;
+}
+#index_btns #btn_main .btn_main a i{
+    font-size: 36px;
+    padding-bottom: 10px;
+}
+
+/* Footer compartido */
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: var(--primary);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer p:first-child{
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+footer p:nth-child(2){
+    font-size: 14px;
+}
+footer #ftr_socials{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    width: 300px;
+}
+footer #ftr_socials a{
+    height: 100%;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer #ftr_socials a i{
+    color: rgb(49, 49, 49);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+footer #ftr_socials a:hover i{
+    color: rgba(51, 51, 51, 0.37);
+}
+.sect_comm{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sect_comm>form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 380px;
+    background-color: var(--primary);
+    padding: 20px 60px;
+    font-family: 'DM Sans', sans-serif;
+}
+/* Formulario añadir */
+#insert_form h4{
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: normal;
+    align-self: normal;
+    font-size: 14px;
+}
+#insert_form form #dni{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#insert_form form #dni input:first-child{
+    width: 60%;
+}
+#insert_form form #dni input:last-child{
+    width: 38%;
+    margin-left: 2%;
+}
+
+
+form input,form select{
+    border: 0;
+    margin-bottom: 5px;
+    padding: 10px;
+    width: 100%;
+}
+form input:focus, form select:focus{
+    outline: none;
+}
+form input[type="submit"], form input[type="reset"]{
+    width: 110px;
+    margin-top: 20px;
+    transition-property: all;
+    transition-duration: 0.2s;
+}
+form input[type="submit"]:hover, form input[type="reset"]:hover{
+    background-color: black;
+    color: white;
+}
+
+/* Pagina de registro completado o fallido */
+.msg_all{
+    font-size: 20px;
+}
+.bees{
+    width: 150px;
+}
+#message a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    /* background-color: var(--primary); */
+    color: rgb(49, 49, 49);
+    border: 1px solid rgb(49, 49, 49);
+    border-radius: 50px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+#message a:hover{
+    background-color: var(--secundary);
+    border: 0px;
+    color: white;
+}
+#message a i{
+    position: relative;
+    left: -2px;
+}
+
+/* Mostrar BBDD */
+
+.sect_comm table{
+    border: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.sect_comm table th, .sect_comm table td{
+    border: 0;
+    padding: 5px 10px;
+}
+.sect_comm table th{
+    border-top: 2px solid var(--lightprima);
+    border-bottom: 2px solid var(--lightprima);
+}
+.sect_comm table td{
+    border-top: 1px solid var(--lightprima);
+}
+.sect_comm table th:nth-child(odd),.sect_comm table td:nth-child(odd){
+    background-color: var(--lightprima);
+}
+
+#dni_enter{
+    margin-bottom: 25px;
+}
